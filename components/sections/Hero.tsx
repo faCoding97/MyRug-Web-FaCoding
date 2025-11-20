@@ -36,23 +36,21 @@ export default function Hero({ hero }: { hero: HeroConfig }) {
                 {hero.primaryCta && (
                   <a
                     href={hero.primaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full bg-[var(--brand)] text-white text-sm font-medium px-5 py-2.5 hover:brightness-95 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--brand)] focus-visible:ring-offset-[var(--bg)]"
-                  >
+                    className="inline-flex items-center justify-center rounded-full bg-[var(--brand)] text-white text-sm font-medium px-5 py-2.5 hover:brightness-95 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--brand)] focus-visible:ring-offset-[var(--bg)]">
                     {hero.primaryCta.label}
                   </a>
                 )}
                 {hero.secondaryCta && (
                   <a
                     href={hero.secondaryCta.href}
-                    className="inline-flex items-center justify-center rounded-full border border-[var(--brand)]/30 bg-white text-[var(--brand)] text-sm font-medium px-5 py-2.5 hover:bg-[var(--brand)]/5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--brand)] focus-visible:ring-offset-[var(--bg)]"
-                  >
+                    className="inline-flex items-center justify-center rounded-full border border-[var(--brand)]/30 bg-white text-[var(--brand)] text-sm font-medium px-5 py-2.5 hover:bg-[var(--brand)]/5 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--brand)] focus-visible:ring-offset-[var(--bg)]">
                     {hero.secondaryCta.label}
                   </a>
                 )}
               </div>
               <p className="text-xs text-slate-600 pt-3">
-                Local delivery in Gqeberha and practical advice on sizes, colours
-                and placement for your space.
+                Local delivery in Gqeberha (Port Elizabeth)and practical advice
+                on sizes, colours and placement for your space.
               </p>
             </div>
 

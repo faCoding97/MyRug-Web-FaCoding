@@ -18,8 +18,9 @@ export default function BlogPage() {
               Rug care tips and buying guides.
             </h1>
             <p className="text-base md:text-lg text-slate-700 leading-relaxed">
-              Short, practical guides from our team in Gqeberha to help you
-              choose, place and care for your rugs with confidence.
+              Short, practical guides from our team in Gqeberha (Port
+              Elizabeth)to help you choose, place and care for your rugs with
+              confidence.
             </p>
           </header>
         </Reveal>

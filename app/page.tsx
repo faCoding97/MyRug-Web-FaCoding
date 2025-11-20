@@ -39,7 +39,7 @@ export default function HomePage() {
             <Features
               id="gallery-heading"
               title="Featured rugs"
-              description="A small selection from our Gqeberha showroom. Browse the full gallery for more."
+              description="A small selection from our Gqeberha (Port Elizabeth)showroom. Browse the full gallery for more."
               featuredGallery={(site as any).gallery?.slice(0, 8) ?? []}
             />
           </Reveal>

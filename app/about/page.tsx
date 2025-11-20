@@ -21,9 +21,9 @@ export default function AboutPage() {
               </h1>
               <p className="text-base md:text-lg text-slate-700 leading-relaxed">
                 myrug is an independent rug specialist based in Gqeberha (Port
-                Elizabeth). We focus on a curated range of Persian, Oriental,
-                kilim, modern and shag rugs that balance durability, comfort and
-                timeless style.
+                Elizabeth)(Port Elizabeth). We focus on a curated range of
+                Persian, Oriental, kilim, modern and shag rugs that balance
+                durability, comfort and timeless style.
               </p>
               <p className="mt-4 text-slate-700 leading-relaxed">
                 Whether you are furnishing a first apartment, updating a family
@@ -48,10 +48,11 @@ export default function AboutPage() {
               <div className="space-y-3">
                 <h2 className="text-xl font-semibold">Delivery & returns</h2>
                 <p className="text-slate-700">
-                  We deliver in and around Gqeberha and can arrange courier
-                  services for out-of-town customers. Unused rugs in original
-                  condition can usually be returned within 7 days – please chat
-                  to us about any special orders or custom-size pieces.
+                  We deliver in and around Gqeberha (Port Elizabeth)and can
+                  arrange courier services for out-of-town customers. Unused
+                  rugs in original condition can usually be returned within 7
+                  days – please chat to us about any special orders or
+                  custom-size pieces.
                 </p>
               </div>
             </div>

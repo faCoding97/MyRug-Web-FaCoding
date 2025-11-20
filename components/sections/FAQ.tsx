@@ -11,14 +11,13 @@ export default function FAQ({ id, items }: { id?: string; items: FAQItem[] }) {
       <SectionTitle
         id={id}
         title="Frequently asked questions"
-        lead="If you have a question that is not answered here, please contact us and our team in Gqeberha will be happy to help."
+        lead="If you have a question that is not answered here, please contact us and our team in Gqeberha (Port Elizabeth)will be happy to help."
       />
       <div className="space-y-4">
         {items.map((item) => (
           <details
             key={item.q}
-            className="group rounded-2xl border border-slate-200 bg-white px-4 py-3"
-          >
+            className="group rounded-2xl border border-slate-200 bg-white px-4 py-3">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-3 py-1">
               <span className="text-sm font-medium text-slate-900">
                 {item.q}

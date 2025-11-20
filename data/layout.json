@@ -1,0 +1,6 @@
+{
+  "containerMax": "1200px",
+  "sectionY": "5rem",
+  "heroHeight": "min(640px, 90vh)",
+  "cardAspect": "4/3"
+}

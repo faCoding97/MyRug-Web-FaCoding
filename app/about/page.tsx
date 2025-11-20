@@ -1,4 +1,4 @@
-import site from "@/data/site.json";
+import site from "@/data/site";
 import { Container } from "@/components/ui/Container";
 import MapEmbed from "@/components/widgets/MapEmbed.client";
 import Reveal from "@/components/widgets/Reveal.client";
@@ -20,10 +20,10 @@ export default function AboutPage() {
                 Premium rugs, selected for real South African homes.
               </h1>
               <p className="text-base md:text-lg text-slate-700 leading-relaxed">
-                myrug is an independent rug specialist based in Gqeberha
-                (Port Elizabeth). We focus on a curated range of Persian,
-                Oriental, kilim, modern and shag rugs that balance durability,
-                comfort and timeless style.
+                myrug is an independent rug specialist based in Gqeberha (Port
+                Elizabeth). We focus on a curated range of Persian, Oriental,
+                kilim, modern and shag rugs that balance durability, comfort and
+                timeless style.
               </p>
               <p className="mt-4 text-slate-700 leading-relaxed">
                 Whether you are furnishing a first apartment, updating a family
@@ -63,11 +63,14 @@ export default function AboutPage() {
               <div className="grid gap-8 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1.6fr)] items-start">
                 <div className="space-y-3 text-slate-700">
                   <p>
-                    <span className="font-semibold">Brand:</span> {org.brandName}
+                    <span className="font-semibold">Brand:</span>{" "}
+                    {org.brandName}
                   </p>
                   <p>
                     <span className="font-semibold">Phone:</span>{" "}
-                    <a href={`tel:${contact.phone}`} className="underline underline-offset-4">
+                    <a
+                      href={`tel:${contact.phone}`}
+                      className="underline underline-offset-4">
                       {contact.phone}
                     </a>
                   </p>
@@ -78,15 +81,16 @@ export default function AboutPage() {
                         href={`https://wa.me/${contact.whatsapp.replace(/[^0-9]/g, "")}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="underline underline-offset-4"
-                      >
+                        className="underline underline-offset-4">
                         {contact.whatsapp}
                       </a>
                     </p>
                   )}
                   <p>
                     <span className="font-semibold">Email:</span>{" "}
-                    <a href={`mailto:${contact.email}`} className="underline underline-offset-4">
+                    <a
+                      href={`mailto:${contact.email}`}
+                      className="underline underline-offset-4">
                       {contact.email}
                     </a>
                   </p>
@@ -96,7 +100,8 @@ export default function AboutPage() {
                   </p>
                   {contact.hours && (
                     <p>
-                      <span className="font-semibold">Hours:</span> {contact.hours}
+                      <span className="font-semibold">Hours:</span>{" "}
+                      {contact.hours}
                     </p>
                   )}
                   <div className="pt-3 border-t border-slate-200 mt-3">
@@ -110,8 +115,8 @@ export default function AboutPage() {
                       availability.
                     </p>
                     <p className="text-sm text-slate-700">
-                      You are also welcome to visit the showroom by
-                      appointment for a more detailed consultation.
+                      You are also welcome to visit the showroom by appointment
+                      for a more detailed consultation.
                     </p>
                   </div>
                 </div>

@@ -1,0 +1,15 @@
+{
+  "eyebrow": "Premium rugs in Gqeberha",
+  "title": "Beautiful rugs, perfectly sized for your home.",
+  "description": "Explore a curated selection of hand-picked rugs, from timeless Persian pieces to modern designs. Local delivery in Gqeberha and expert advice included.",
+  "primaryCta": {
+    "label": "Browse Gallery",
+    "href": "/gallery"
+  },
+  "secondaryCta": {
+    "label": "Get a Quote",
+    "href": "/about#contact"
+  },
+  "image": "/og-image.png",
+  "alt": "Living room in Gqeberha with a premium rug from myrug"
+}

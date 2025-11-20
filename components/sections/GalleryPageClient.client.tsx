@@ -7,7 +7,6 @@ import { SortBar } from "@/components/widgets/SortBar.client";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { formatPriceZAR } from "@/lib/utils";
-import Modal from "@/components/widgets/Modal.client";
 
 type GalleryItem = {
   id: string;
@@ -149,8 +148,7 @@ export default function GalleryPageClient({ items }: Props) {
               key={item.id}
               type="button"
               onClick={() => setSelectedItem(item)}
-              className="text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] rounded-2xl"
-            >
+              className="text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] rounded-2xl">
               <Card className="h-full flex flex-col overflow-hidden transition-transform duration-200 group-hover:-translate-y-1">
                 <div className="aspect-[4/3] w-full bg-slate-100 overflow-hidden">
                   <img
@@ -173,7 +171,9 @@ export default function GalleryPageClient({ items }: Props) {
                     {item.badges && item.badges.length > 0 && (
                       <div className="flex flex-wrap gap-1 justify-end">
                         {item.badges.slice(0, 2).map((badge) => (
-                          <Badge key={badge} className="text-[10px] px-2 py-0.5">
+                          <Badge
+                            key={badge}
+                            className="text-[10px] px-2 py-0.5">
                             {badge}
                           </Badge>
                         ))}
@@ -198,71 +198,6 @@ export default function GalleryPageClient({ items }: Props) {
           ))}
         </div>
       )}
-
-      <Modal
-        title={selectedItem?.title ?? ""}
-        isOpen={!!selectedItem}
-        onClose={() => setSelectedItem(null)}
-      >
-        {selectedItem && (
-          <div className="space-y-4">
-            <div className="aspect-[4/3] w-full rounded-xl overflow-hidden bg-slate-100">
-              <img
-                src={selectedItem.image}
-                alt={selectedItem.title}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <p className="text-sm text-slate-700">{selectedItem.description}</p>
-            <dl className="grid grid-cols-2 gap-3 text-sm text-slate-700">
-              <div>
-                <dt className="font-medium">Category</dt>
-                <dd>{selectedItem.category}</dd>
-              </div>
-              <div>
-                <dt className="font-medium">Size</dt>
-                <dd>
-                  {selectedItem.size}
-                  {selectedItem.dimensions ? ` (${selectedItem.dimensions})` : ""}
-                </dd>
-              </div>
-              <div>
-                <dt className="font-medium">Material</dt>
-                <dd>{selectedItem.material}</dd>
-              </div>
-              {selectedItem.origin && (
-                <div>
-                  <dt className="font-medium">Origin</dt>
-                  <dd>{selectedItem.origin}</dd>
-                </div>
-              )}
-              {selectedItem.colors && selectedItem.colors.length > 0 && (
-                <div>
-                  <dt className="font-medium">Colours</dt>
-                  <dd>{selectedItem.colors.join(", ")}</dd>
-                </div>
-              )}
-              <div>
-                <dt className="font-medium">Price</dt>
-                <dd className="text-[var(--brand)] font-semibold">
-                  {formatPriceZAR(selectedItem.priceZAR)}
-                </dd>
-              </div>
-            </dl>
-            {selectedItem.badges && selectedItem.badges.length > 0 && (
-              <div className="flex flex-wrap gap-2 pt-2">
-                {selectedItem.badges.map((badge) => (
-                  <Badge key={badge}>{badge}</Badge>
-                ))}
-              </div>
-            )}
-            <p className="text-xs text-slate-600 pt-2">
-              To view or reserve this rug, contact us with the rug name and we
-              will confirm availability from our Gqeberha showroom.
-            </p>
-          </div>
-        )}
-      </Modal>
     </>
   );
 }

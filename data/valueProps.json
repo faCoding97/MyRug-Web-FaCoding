@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Curated selection",
+    "description": "Every rug is hand-selected for quality, color and durability.",
+    "icon": "check"
+  },
+  {
+    "title": "Local expertise",
+    "description": "Based in Gqeberha with years of experience in rugs and flooring.",
+    "icon": "map"
+  },
+  {
+    "title": "Easy home trial",
+    "description": "Try selected rugs in your space before you decide.",
+    "icon": "home"
+  }
+]

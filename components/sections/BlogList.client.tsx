@@ -1,85 +1,70 @@
 "use client";
 
+import Link from "next/link";
 import { Card } from "@/components/ui/Card";
-import Modal from "@/components/widgets/Modal.client";
-import { useState } from "react";
+import { Badge } from "@/components/ui/Badge";
 
-export default function BlogList({ posts }: { posts: any[] }) {
-  const [activePost, setActivePost] = useState<any | null>(null);
+type Post = {
+  id: string;
+  title: string;
+  date: string;
+  tags?: string[];
+  excerpt: string;
+};
+
+type Props = {
+  posts: Post[];
+};
+
+export default function BlogList({ posts }: Props) {
+  if (!posts || posts.length === 0) {
+    return (
+      <p className="text-sm text-slate-700">
+        No blog posts available yet. Please check back soon.
+      </p>
+    );
+  }
 
   return (
-    <>
-      <div className="grid gap-6 md:grid-cols-2">
-        {posts.map((post) => (
-          <button
-            key={post.id}
-            type="button"
-            onClick={() => setActivePost(post)}
-            className="text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] rounded-2xl"
-          >
-            <Card className="h-full flex flex-col transition-transform duration-200 group-hover:-translate-y-1">
-              <div className="p-5 flex-1 flex flex-col gap-2">
-                <p className="text-xs text-slate-500">
-                  {new Date(post.date).toLocaleDateString("en-ZA", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })}
-                </p>
-                <h2 className="text-lg font-semibold text-slate-900">
-                  {post.title}
-                </h2>
-                <p className="text-sm text-slate-700 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                {post.tags && post.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-1 pt-2">
-                    {post.tags.map((tag: string) => (
-                      <span
-                        key={tag}
-                        className="inline-flex items-center rounded-full border border-slate-200 px-2 py-0.5 text-[11px] text-slate-600"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </Card>
-          </button>
-        ))}
-      </div>
-
-      <Modal
-        title={activePost?.title ?? ""}
-        isOpen={!!activePost}
-        onClose={() => setActivePost(null)}
-      >
-        {activePost && (
-          <article className="space-y-3 text-sm text-slate-700 leading-relaxed">
-            <p className="text-xs text-slate-500">
-              {new Date(activePost.date).toLocaleDateString("en-ZA", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              })}
+    <div className="grid gap-6 md:grid-cols-2">
+      {posts.map((post) => (
+        <Link
+          key={post.id}
+          href={`/blog/${post.id}`}
+          className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)] rounded-2xl">
+          <Card className="h-full flex flex-col p-4 sm:p-5 transition-transform duration-200 group-hover:-translate-y-1">
+            <div className="mb-3 flex items-center justify-between gap-2">
+              <p className="text-xs text-slate-600">
+                {new Date(post.date).toLocaleDateString("en-ZA", {
+                  year: "numeric",
+                  month: "short",
+                  day: "2-digit",
+                })}
+              </p>
+              {post.tags && post.tags.length > 0 && (
+                <div className="flex flex-wrap gap-1 justify-end">
+                  {post.tags.slice(0, 2).map((tag) => (
+                    <Badge
+                      key={tag}
+                      className="text-[10px] px-2 py-0.5 bg-[var(--bg)]">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+            </div>
+            <h2 className="text-base md:text-lg font-semibold text-slate-900 mb-1.5">
+              {post.title}
+            </h2>
+            <p className="text-sm text-slate-700 line-clamp-3 mb-3">
+              {post.excerpt}
             </p>
-            {activePost.tags && activePost.tags.length > 0 && (
-              <div className="flex flex-wrap gap-1 pt-1">
-                {activePost.tags.map((tag: string) => (
-                  <span
-                    key={tag}
-                    className="inline-flex items-center rounded-full border border-slate-200 px-2 py-0.5 text-[11px] text-slate-600"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-            <p className="whitespace-pre-line">{activePost.content}</p>
-          </article>
-        )}
-      </Modal>
-    </>
+            <span className="mt-auto text-sm font-medium text-[var(--brand)] group-hover:underline">
+              Read more
+            </span>
+          </Card>
+        </Link>
+      ))}
+    </div>
   );
 }

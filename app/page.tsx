@@ -1,4 +1,4 @@
-import site from "@/data/site.json";
+import site from "@/data/site";
 import { Container } from "@/components/ui/Container";
 import Hero from "@/components/sections/Hero";
 import ValueProps from "@/components/sections/ValueProps";
@@ -22,8 +22,7 @@ export default function HomePage() {
       <section
         id="why-us"
         aria-labelledby="why-us-heading"
-        className="anchor-section py-16 md:py-20"
-      >
+        className="anchor-section py-16 md:py-20">
         <Container>
           <Reveal>
             <ValueProps items={valueProps} />
@@ -34,8 +33,7 @@ export default function HomePage() {
       <section
         id="gallery"
         aria-labelledby="gallery-heading"
-        className="anchor-section py-16 md:py-20 bg-white/80"
-      >
+        className="anchor-section py-16 md:py-20 bg-white/80">
         <Container>
           <Reveal>
             <Features
@@ -50,8 +48,7 @@ export default function HomePage() {
 
       <section
         aria-labelledby="features-heading"
-        className="anchor-section py-16 md:py-20"
-      >
+        className="anchor-section py-16 md:py-20">
         <Container>
           <Reveal>
             <Features
@@ -66,8 +63,7 @@ export default function HomePage() {
 
       <section
         aria-labelledby="testimonials-heading"
-        className="anchor-section py-16 md:py-20 bg-white/80"
-      >
+        className="anchor-section py-16 md:py-20 bg-white/80">
         <Container>
           <Reveal>
             <Testimonials
@@ -82,8 +78,7 @@ export default function HomePage() {
       <section
         id="faq"
         aria-labelledby="faq-heading"
-        className="anchor-section py-16 md:py-20"
-      >
+        className="anchor-section py-16 md:py-20">
         <Container>
           <Reveal>
             <FAQ id="faq-heading" items={faq} />
@@ -94,8 +89,7 @@ export default function HomePage() {
       <section
         id="contact"
         aria-labelledby="contact-heading"
-        className="anchor-section py-16 md:py-20 bg-white/80"
-      >
+        className="anchor-section py-16 md:py-20 bg-white/80">
         <Container>
           <Reveal>
             <CTA contact={contact} />

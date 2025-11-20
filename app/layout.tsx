@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import site from "@/data/site.json";
+import site from "@/data/site";
 import Header from "@/components/layout/Header.client";
 import Footer from "@/components/layout/Footer";
 
@@ -57,12 +57,9 @@ export default function RootLayout({
           ["--bg" as any]: theme.bg ?? "#FAF7F2",
           ["--fg" as any]: theme.fg ?? "#0B1220",
         }}
-        className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--fg)]"
-      >
+        className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--fg)]">
         <Header nav={(site as any).nav} />
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
         <Footer org={(site as any).org} contact={(site as any).contact} />
       </body>
     </html>

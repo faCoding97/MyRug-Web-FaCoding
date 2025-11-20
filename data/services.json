@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rug-cleaning",
+    "title": "Professional Rug Cleaning",
+    "description": "Deep, fibre-safe cleaning for modern and traditional rugs.",
+    "bullets": [
+      "Gentle, rug-specific cleaning methods",
+      "Dust removal, stain treatment and rinsing",
+      "Suitable for wool, synthetic and many natural fibres",
+      "Collection and delivery available in Gqeberha"
+    ],
+    "fromPriceZAR": 450
+  },
+  {
+    "id": "rug-repair-fringe",
+    "title": "Rug Repairs & Fringe Work",
+    "description": "Skilled repairs to help extend the life of your favourite rugs.",
+    "bullets": [
+      "Fringe repair and replacement",
+      "Edge binding and securing loose ends",
+      "Straightening curled corners where possible",
+      "Assessment and quotation before work starts"
+    ],
+    "fromPriceZAR": 650
+  },
+  {
+    "id": "custom-sizing-underlays",
+    "title": "Custom Sizing & Underlays",
+    "description": "Make your rug fit your room and stay safely in place.",
+    "bullets": [
+      "Cut-to-size non-slip underlays",
+      "Advice on rug placement and proportions",
+      "Solutions for open-plan living and awkward spaces",
+      "Ideal for wooden, tiled and vinyl floors"
+    ],
+    "fromPriceZAR": 350
+  },
+  {
+    "id": "home-trial-consult",
+    "title": "Home Trial & Consultation",
+    "description": "See selected rugs in your own space before you decide.",
+    "bullets": [
+      "Shortlist rugs with our team",
+      "We bring selected pieces to your home in Gqeberha",
+      "Perfect for tricky sizes and colour decisions",
+      "Available on selected stock – booking essential"
+    ],
+    "fromPriceZAR": null
+  },
+  {
+    "id": "commercial-fit-outs",
+    "title": "Commercial & Hospitality Fit-outs",
+    "description": "Rug solutions for guesthouses, offices and hospitality spaces.",
+    "bullets": [
+      "Product selection for your traffic levels and style",
+      "On-site measurements in Gqeberha by arrangement",
+      "Options for easy-care and stain-resistant rugs",
+      "Co-ordination with your interior team where needed"
+    ],
+    "fromPriceZAR": null
+  }
+]

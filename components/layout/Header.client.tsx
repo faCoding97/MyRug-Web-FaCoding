@@ -37,14 +37,19 @@ export default function Header({ nav }: Props) {
     <header
       className={cn(
         "sticky top-0 z-40 border-b transition-colors backdrop-blur",
-        scrolled ? "bg-[var(--bg)]/95 border-slate-200" : "bg-[var(--bg)]/80 border-transparent"
-      )}
-    >
+        scrolled
+          ? "bg-[var(--bg)]/95 border-slate-200"
+          : "bg-[var(--bg)]/80 border-transparent"
+      )}>
       <Container className="flex items-center justify-between py-3 md:py-4">
         <Link href="/" className="flex items-center gap-3">
           <div className="h-9 w-9 rounded-xl bg-[var(--brand)]/10 flex items-center justify-center border border-[var(--brand)]/30">
             <span className="text-sm font-semibold tracking-tight text-[var(--brand)]">
-              my
+              <img
+                src="/og-image.png"
+                alt="My Rug Logo"
+                className="w-5 h-5 sm:w-6 sm:h-6 object-contain rounded-md"
+              />
             </span>
           </div>
           <div className="flex flex-col leading-tight">
@@ -64,8 +69,7 @@ export default function Header({ nav }: Props) {
                 "relative px-1 py-1",
                 "text-slate-700 hover:text-slate-900",
                 pathname === item.href && "text-[var(--brand)] font-medium"
-              )}
-            >
+              )}>
               {item.label}
               {pathname === item.href && (
                 <span className="absolute inset-x-0 -bottom-1 h-[2px] rounded-full bg-[var(--brand)]" />
@@ -77,16 +81,14 @@ export default function Header({ nav }: Props) {
         <div className="flex items-center gap-3">
           <Link
             href="/gallery"
-            className="hidden md:inline-flex items-center rounded-full border border-[var(--brand)]/30 bg-[var(--brand)] text-white text-xs font-medium px-3 py-1.5 hover:brightness-95 transition"
-          >
+            className="hidden md:inline-flex items-center rounded-full border border-[var(--brand)]/30 bg-[var(--brand)] text-white text-xs font-medium px-3 py-1.5 hover:brightness-95 transition">
             Browse gallery
           </Link>
           <button
             type="button"
             onClick={() => setOpen((x) => !x)}
             aria-label="Toggle navigation"
-            className="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-full border border-slate-300 bg-white/80 hover:bg-white transition"
-          >
+            className="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-full border border-slate-300 bg-white/80 hover:bg-white transition">
             <div className="relative w-4 h-3">
               <span
                 className={cn(
@@ -124,8 +126,7 @@ export default function Header({ nav }: Props) {
                     pathname === item.href
                       ? "text-[var(--brand)] font-medium bg-white"
                       : "text-slate-700 hover:bg-white/70"
-                  )}
-                >
+                  )}>
                   <span>{item.label}</span>
                   {pathname === item.href && (
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--brand)]" />

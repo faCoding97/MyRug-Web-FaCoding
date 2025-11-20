@@ -1,4 +1,4 @@
-import site from "@/data/site.json";
+import site from "@/data/site";
 import { Container } from "@/components/ui/Container";
 import Reveal from "@/components/widgets/Reveal.client";
 import GalleryPageClient from "@/components/sections/GalleryPageClient.client";

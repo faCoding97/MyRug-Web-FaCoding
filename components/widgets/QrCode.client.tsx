@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { QRCodeCanvas } from "qrcode.react";
-import { Button } from "@/components/ui/Button";
 
 type Props = {
   value: string;
@@ -10,42 +9,49 @@ type Props = {
   includeDownload?: boolean;
 };
 
-export default function QrCode({ value, size = 120, includeDownload }: Props) {
-  const ref = useRef<QRCodeCanvas | null>(null);
+export default function QrCode({
+  value,
+  size = 120,
+  includeDownload = false,
+}: Props) {
+  // 👇 این دیگه typeش HTMLDivElement هست، نه QRCodeCanvas
+  const ref = useRef<HTMLDivElement | null>(null);
 
   const handleDownload = () => {
+    if (!includeDownload) return;
+
     try {
-      const canvas = (ref.current as any)?.canvas;
+      const canvas = ref.current?.querySelector(
+        "canvas"
+      ) as HTMLCanvasElement | null;
+
       if (!canvas) return;
+
       const url = canvas.toDataURL("image/png");
       const link = document.createElement("a");
       link.href = url;
-      link.download = "myrug-gallery-qr.png";
+      link.download = "myrug-qr.png";
       link.click();
-    } catch {
-      // fail silently
+    } catch (error) {
+      console.error("Failed to download QR code", error);
     }
   };
 
   return (
-    <div className="flex flex-col items-center gap-2">
-      <QRCodeCanvas
-        value={value}
-        size={size}
-        includeMargin
-        bgColor="#FAF7F2"
-        fgColor="#0B1220"
+    <div className="inline-flex flex-col items-center gap-3">
+      <div
         ref={ref}
-      />
+        className="rounded-xl bg-white p-3 shadow border border-slate-200">
+        <QRCodeCanvas value={value} size={size} includeMargin />
+      </div>
+
       {includeDownload && (
-        <Button
+        <button
           type="button"
-          variant="secondary"
-          className="text-[11px] px-3 py-1.5"
           onClick={handleDownload}
-        >
+          className="text-xs md:text-sm inline-flex items-center gap-1 rounded-full border border-[var(--brand)]/40 px-3 py-1 bg-white text-[var(--brand)] hover:bg-[var(--brand)]/5 transition">
           Download PNG
-        </Button>
+        </button>
       )}
     </div>
   );

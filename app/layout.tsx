@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://myrug.co.za",
   },
+  verification: {
+    google: "Xke9sSoZGAxq3-aNsIJubc73vqJ_tLCh80nXg6mR0xs",
+  },
 };
 
 export default function RootLayout({

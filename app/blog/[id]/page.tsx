@@ -60,15 +60,15 @@ export default function BlogPostPage({ params }: Params) {
       <Container>
         <Reveal>
           <article className="max-w-3xl mx-auto">
-            {/* 🔙 دکمه‌ی برگشت */}
-            <div className="mb-4">
+            {/* 🔙 Professional back button */}
+            <div className="mb-6 flex items-center justify-between">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-sm text-slate-700 hover:text-[var(--brand)]">
-                <span className="inline-block rounded-full border border-slate-300 px-2 py-0.5 text-xs">
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:border-[var(--brand)] hover:text-[var(--brand)] hover:shadow-md hover:bg-white transition-all">
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[var(--brand)]/10 text-[var(--brand)] text-xs">
                   ←
                 </span>
-                <span>Back to blog</span>
+                <span>Back to all articles</span>
               </Link>
             </div>
 

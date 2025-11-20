@@ -17,7 +17,7 @@ export default function Footer({ org, contact }: Props) {
             </p>
             <p className="text-xs text-slate-600 leading-relaxed">
               Rugs, runners and carpets for real South African homes. Visit our
-              Gqeberha (Port Elizabeth)showroom by appointment for personalised
+              Gqeberha (Port Elizabeth) showroom by appointment for personalised
               advice.
             </p>
 

@@ -1,6 +1,6 @@
 # myrug.co.za – Catalog-first rug store (frontend-only)
 
-This is a **frontend-only**, production-ready Next.js 14 project for **myrug**, a premium rug and carpet retailer in **Gqeberha (Port Elizabeth), South Africa**.
+This is a **frontend-only**, production-ready Next.js 14 project for **myrug**, a premium rug and carpet retailer in **Gqeberha (Port Elizabeth) , South Africa**.
 
 The site is designed to be **ultra-simple, catalog-first and mobile friendly**, so customers can quickly browse rugs, filter by key attributes and request a quote.
 

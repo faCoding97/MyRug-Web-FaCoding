@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s · myrug",
   },
   description:
-    "myrug is a premium rug and carpet retailer in Gqeberha (Port Elizabeth), South Africa. Explore curated Persian, Oriental and modern rugs with local delivery.",
+    "myrug is a premium rug and carpet retailer in Gqeberha (Port Elizabeth) , South Africa. Explore curated Persian, Oriental and modern rugs with local delivery.",
   openGraph: {
     title: "myrug · Premium Rugs in Gqeberha",
     description:

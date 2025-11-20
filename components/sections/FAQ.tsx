@@ -11,7 +11,7 @@ export default function FAQ({ id, items }: { id?: string; items: FAQItem[] }) {
       <SectionTitle
         id={id}
         title="Frequently asked questions"
-        lead="If you have a question that is not answered here, please contact us and our team in Gqeberha (Port Elizabeth)will be happy to help."
+        lead="If you have a question that is not answered here, please contact us and our team in Gqeberha (Port Elizabeth) will be happy to help."
       />
       <div className="space-y-4">
         {items.map((item) => (

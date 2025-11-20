@@ -48,7 +48,7 @@ export default function AboutPage() {
               <div className="space-y-3">
                 <h2 className="text-xl font-semibold">Delivery & returns</h2>
                 <p className="text-slate-700">
-                  We deliver in and around Gqeberha (Port Elizabeth)and can
+                  We deliver in and around Gqeberha (Port Elizabeth) and can
                   arrange courier services for out-of-town customers. Unused
                   rugs in original condition can usually be returned within 7
                   days – please chat to us about any special orders or

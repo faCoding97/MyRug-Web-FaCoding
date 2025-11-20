@@ -49,7 +49,7 @@ export default function Hero({ hero }: { hero: HeroConfig }) {
                 )}
               </div>
               <p className="text-xs text-slate-600 pt-3">
-                Local delivery in Gqeberha (Port Elizabeth)and practical advice
+                Local delivery in Gqeberha (Port Elizabeth) and practical advice
                 on sizes, colours and placement for your space.
               </p>
             </div>

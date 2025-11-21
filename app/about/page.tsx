@@ -21,7 +21,7 @@ export default function AboutPage() {
               </h1>
               <p className="text-base md:text-lg text-slate-700 leading-relaxed">
                 myrug is an independent rug specialist based in Gqeberha (Port
-                Elizabeth)(Port Elizabeth). We focus on a curated range of
+                Elizabeth). We focus on a curated range of
                 Persian, Oriental, kilim, modern and shag rugs that balance
                 durability, comfort and timeless style.
               </p>
@@ -125,7 +125,7 @@ export default function AboutPage() {
                   <MapEmbed
                     embedSrc={contact.mapEmbedSrc}
                     query={contact.mapQuery}
-                    title="myrug location in Gqeberha"
+                    title="myrug location in  Gqeberha (Port Elizabeth)"
                     className="w-full"
                   />
                 </div>

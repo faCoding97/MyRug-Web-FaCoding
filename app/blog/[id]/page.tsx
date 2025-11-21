@@ -28,7 +28,8 @@ export function generateMetadata({ params }: Params): Metadata {
 
   const baseTitle = `${post.title} | myrug Blog`;
   const description =
-    post.excerpt ?? "Rug care tips and buying guides from myrug in Gqeberha.";
+    post.excerpt ??
+    "Rug care tips and buying guides from myrug in  Gqeberha (Port Elizabeth).";
 
   return {
     title: baseTitle,

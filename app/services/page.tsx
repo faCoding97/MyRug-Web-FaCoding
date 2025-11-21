@@ -22,7 +22,8 @@ export default function ServicesPage() {
             <p className="text-base md:text-lg text-slate-700 leading-relaxed">
               Beyond selling rugs, we look after them. From professional
               cleaning and repairs to custom underlays and home trials, our
-              services are designed around real homes in Gqeberha.
+              services are designed around real homes in Gqeberha (Port
+              Elizabeth).
             </p>
           </header>
         </Reveal>

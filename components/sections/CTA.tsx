@@ -25,8 +25,7 @@ export default function CTA({ contact }: Props) {
                 href={`https://wa.me/${contact.whatsapp.replace(/[^0-9]/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-4"
-              >
+                className="underline underline-offset-4">
                 {contact.whatsapp}
               </a>
             </p>
@@ -53,7 +52,7 @@ export default function CTA({ contact }: Props) {
         <MapEmbed
           embedSrc={contact.mapEmbedSrc}
           query={contact.mapQuery}
-          title="myrug location in Gqeberha"
+          title="myrug location in  Gqeberha (Port Elizabeth)"
           className="w-full"
         />
       </div>

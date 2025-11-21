@@ -13,7 +13,7 @@ export default function Footer({ org, contact }: Props) {
           {/* بخش چپ */}
           <div className="space-y-4 max-w-lg">
             <p className="text-sm font-semibold text-slate-900">
-              {org.brandName} · Premium rugs in Gqeberha
+              {org.brandName} · Premium rugs in Gqeberha (Port Elizabeth)
             </p>
             <p className="text-xs text-slate-600 leading-relaxed">
               Rugs, runners and carpets for real South African homes. Visit our

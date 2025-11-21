@@ -7,15 +7,15 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://myrug.co.za"),
   title: {
-    default: "myrug · Premium Rugs in Gqeberha",
+    default: "myrug · Premium Rugs in  Gqeberha (Port Elizabeth)",
     template: "%s · myrug",
   },
   description:
     "myrug is a premium rug and carpet retailer in Gqeberha (Port Elizabeth) , South Africa. Explore curated Persian, Oriental and modern rugs with local delivery.",
   openGraph: {
-    title: "myrug · Premium Rugs in Gqeberha",
+    title: "myrug · Premium Rugs in  Gqeberha (Port Elizabeth)",
     description:
-      "Curated Persian, Oriental, kilim and modern rugs with expert advice and local delivery in Gqeberha.",
+      "Curated Persian, Oriental, kilim and modern rugs with expert advice and local delivery in  Gqeberha (Port Elizabeth).",
     url: "https://myrug.co.za",
     siteName: "myrug",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "myrug showroom with premium rugs in Gqeberha",
+        alt: "myrug showroom with premium rugs in  Gqeberha (Port Elizabeth)",
       },
     ],
     locale: "en_ZA",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "myrug · Premium Rugs in Gqeberha",
+    title: "myrug · Premium Rugs in  Gqeberha (Port Elizabeth)",
     description:
-      "Curated Persian, Oriental, kilim and modern rugs with expert advice and local delivery in Gqeberha.",
+      "Curated Persian, Oriental, kilim and modern rugs with expert advice and local delivery in  Gqeberha (Port Elizabeth).",
     images: ["/og-image.png"],
   },
   alternates: {

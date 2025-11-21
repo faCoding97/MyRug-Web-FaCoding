@@ -55,7 +55,7 @@ export default function Header({ nav }: Props) {
           <div className="flex flex-col leading-tight">
             <span className="font-semibold text-base">myrug</span>
             <span className="text-xs text-slate-600">
-              Rugs &amp; carpets · Gqeberha
+              Rugs &amp; carpets · Gqeberha (Port Elizabeth)
             </span>
           </div>
         </Link>
